@@ -100,5 +100,63 @@ public class TextController : MonoBehaviour {
 
     void StateCorridor0() {
         text.text = "You are in the corridor.\n\n";
+        if(Input.GetKeyDown(KeyCode.S)) myState = States.Stairs0;
+		else if(Input.GetKeyDown(KeyCode.F)) myState = States.Floor;
+		else if(Input.GetKeyDown(KeyCode.C)) myState = States.ClosetDoor;
+    }
+
+    void StateCorridor1() {
+        text.text = "You are in the corridor.\n\n";
+        if(Input.GetKeyDown(KeyCode.S)) myState = States.Stairs1;
+        else if(Input.GetKeyDown(KeyCode.P)) myState = States.InCloset;
+    }
+
+    void StateCorridor2() {
+        text.text = "You are in the corridor.\n\n";
+        if(Input.GetKeyDown(KeyCode.S)) myState = States.Stairs2;
+        else if(Input.GetKeyDown(KeyCode.B)) myState = States.InCloset;
+    }
+
+    void StateCorridor3() {
+        text.text = "You are in the corridor.\n\n";
+        if(Input.GetKeyDown(KeyCode.S)) myState = States.Courtyard;
+        else if(Input.GetKeyDown(KeyCode.U)) myState = States.InCloset;
+    }
+
+    void StateFloor() {
+        text.text = "You are in the corridor.\n\n";
+        if(Input.GetKeyDown(KeyCode.H)) myState = States.Corridor1;
+        else if(Input.GetKeyDown(KeyCode.R)) myState = States.Corridor0;
+    }
+
+    void StateStairs0() {
+        text.text = "You are in the corridor.\n\n";
+        if(Input.GetKeyDown(KeyCode.R)) myState = States.Corridor0;
+    }
+
+    void StateStairs1() {
+        text.text = "You are in the corridor.\n\n";
+        if(Input.GetKeyDown(KeyCode.R)) myState = States.Corridor1;
+    }
+
+    void StateStairs2() {
+        text.text = "You are in the corridor.\n\n";
+        if(Input.GetKeyDown(KeyCode.R)) myState = States.Corridor2;
+    }
+
+    void StateClosetDoor() {
+        text.text = "You are in the corridor.\n\n";
+        if(Input.GetKeyDown(KeyCode.R)) myState = States.Corridor0;
+    }
+
+    void StateInCloset() {
+        text.text = "You are in the corridor.\n\n";
+        if(Input.GetKeyDown(KeyCode.D)) myState = States.Corridor3;
+        else if(Input.GetKeyDown(KeyCode.R)) myState = States.Corridor2;
+    }
+
+    void StateCourtyard() {
+        text.text = "You are in the corridor.\n\n";
+        if(Input.GetKeyDown(KeyCode.P)) myState = States.Cell;
     }
 }
