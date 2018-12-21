@@ -172,7 +172,7 @@ public class TextController : MonoBehaviour {
     void StateInCloset() {
         text.text = "Inside the closet you see a cleaner's uniform that looks about your size! " +
                     "Seems like your day is looking-up.\n\n" +
-                    "Press D to Dress up, or R to Return to the corridor";
+                    "Press D to Dress up, or R to Return to the corridor.";
         if(Input.GetKeyDown(KeyCode.D)) myState = States.Corridor3;
         else if(Input.GetKeyDown(KeyCode.R)) myState = States.Corridor2;
     }
@@ -181,7 +181,8 @@ public class TextController : MonoBehaviour {
         text.text = "You walk through the courtyard dressed as a cleaner. " +
                     "The guard tips his hat at you as you waltz past, claiming " +
                     "your freedom. You heart races as you walk into the sunset.\n\n" +
-                    "Press P to Play again.";
+                    "Press P to Play again, or Q to Quit the game.";
         if(Input.GetKeyDown(KeyCode.P)) myState = States.Cell;
+        if(Input.GetKeyDown(KeyCode.Q)) Application.Quit();
     }
 }
