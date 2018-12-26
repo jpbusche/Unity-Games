@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 960904514}
   - component: {fileID: 960904513}
   - component: {fileID: 960904512}
+  - component: {fileID: 960904515}
   m_Layer: 0
   m_Name: Start Button
   m_TagString: Untagged
@@ -284,7 +285,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 960904513}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 960904515}
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Core
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &960904513
@@ -320,6 +332,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 960904510}
+--- !u!114 &960904515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 960904510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8297cd5976954504991e2b5175ccee09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1282115379
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +354,7 @@ GameObject:
   - component: {fileID: 1282115383}
   - component: {fileID: 1282115382}
   - component: {fileID: 1282115381}
+  - component: {fileID: 1282115384}
   m_Layer: 0
   m_Name: Exit Button
   m_TagString: Untagged
@@ -395,7 +419,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1282115382}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1282115384}
+        m_MethodName: OnQuit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1282115382
@@ -431,6 +466,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1282115379}
+--- !u!114 &1282115384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1282115379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8297cd5976954504991e2b5175ccee09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1296259167
 GameObject:
   m_ObjectHideFlags: 0
