@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/Menu.unity
     guid: 6376a7b981685ff4eb55bbfc1179b717
   - enabled: 1
-    path: Assets/_Scenes/Level 1.unity
+    path: Assets/_Scenes/Level 2.unity
     guid: 5878def59755eac4b976c3810d530d94
   - enabled: 1
     path: Assets/_Scenes/Game Over.unity
@@ -21,9 +21,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/Congratulations.unity
     guid: e4e88330e7871654da5747d807fdc798
   - enabled: 1
-    path: Assets/_Scenes/Level 2.unity
+    path: Assets/_Scenes/Level 3.unity
     guid: 4c5a814e09ef69c42ac93d03c83227b7
   - enabled: 1
-    path: Assets/_Scenes/Level 3.unity
+    path: Assets/_Scenes/Level 1.unity
     guid: ee5652a6fdf123b4882984af73432edf
   m_configObjects: {}
