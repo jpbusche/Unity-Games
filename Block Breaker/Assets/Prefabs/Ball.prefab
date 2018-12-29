@@ -132,5 +132,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 0}
-  velY: 15
+  velY: 10
   velX: 2

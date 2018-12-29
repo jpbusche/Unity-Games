@@ -94,8 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenUnits: 16
-  minX: 2.1
-  maxX: 13.9
+  minX: -0.6
+  maxX: 16.6
 --- !u!61 &5000427385801277274
 BoxCollider2D:
   m_ObjectHideFlags: 0

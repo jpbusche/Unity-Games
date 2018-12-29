@@ -10,8 +10,10 @@ public class Block : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.name == "Ball") {
             if(lives == 0) Destroy(gameObject);
-            lives--;
-            GetComponent<SpriteRenderer>().sprite = blockSprites[lives];
+            else {
+                lives--;
+                GetComponent<SpriteRenderer>().sprite = blockSprites[lives];
+            }
         }
     }
 

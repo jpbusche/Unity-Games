@@ -24,7 +24,7 @@ public class Ball : MonoBehaviour {
         }
     }
 
-    private void LockBall() {
+    public void LockBall() {
         Vector2 paddlePos = new Vector2(paddle.transform.position.x, paddle.transform.position.y);
         transform.position = paddlePos + distance;
     }
