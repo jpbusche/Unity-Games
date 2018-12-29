@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour {
 
-    public float screenUnits = 16;
+    public float screenUnits = 16f;
+    public float minX = 1.8f;
+    public float maxX = 14.2f;
 
     // Start is called before the first frame update
     void Start() {
@@ -14,7 +16,8 @@ public class Paddle : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         float posX = Input.mousePosition.x / Screen.width * screenUnits;
-        Debug.Log(posX);
-        transform.position = new Vector2(posX, transform.position.y);
+        Vector2 paddlePos = new Vector2(transform.position.x, transform.position.y);
+        paddlePos.x = Mathf.Clamp(posX, minX, maxX);
+        transform.position = paddlePos;
     }
 }
