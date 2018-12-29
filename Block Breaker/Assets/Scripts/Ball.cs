@@ -9,10 +9,11 @@ public class Ball : MonoBehaviour {
     public float velX = 0.5f;
 
     Vector2 distance;
-    bool isLauched = false;
+    bool isLauched;
 
     // Start is called before the first frame update
     void Start() {
+        isLauched = false;
         distance = transform.position - paddle.transform.position;
     }
 
@@ -24,7 +25,7 @@ public class Ball : MonoBehaviour {
         }
     }
 
-    public void LockBall() {
+    private void LockBall() {
         Vector2 paddlePos = new Vector2(paddle.transform.position.x, paddle.transform.position.y);
         transform.position = paddlePos + distance;
     }
@@ -33,6 +34,12 @@ public class Ball : MonoBehaviour {
         if(Input.GetMouseButtonDown(0)) {
             GetComponent<Rigidbody2D>().velocity = new Vector2(velX, velY);
             isLauched = true;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(isLauched && collision.gameObject.name != "Left Wall" && collision.gameObject.name != "Right Wall" && collision.gameObject.name != "Top Wall") {
+            GetComponent<AudioSource>().Play();
         }
     }
 }
