@@ -1221,7 +1221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21842bbf36f2fc34db8b3781a17a9bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blocks: {fileID: 933134420}
   nextButton: {fileID: 439740865}
   messageText: {fileID: 588643316}
   blocksText: {fileID: 1343177259}
@@ -10800,21 +10799,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5838887623401281213, guid: 96fdadbcc0e1f77459556c02fe45f777,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.16078432
-      objectReference: {fileID: 0}
-    - target: {fileID: 5838887623401281213, guid: 96fdadbcc0e1f77459556c02fe45f777,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.16470589
-      objectReference: {fileID: 0}
-    - target: {fileID: 5838887623401281213, guid: 96fdadbcc0e1f77459556c02fe45f777,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.17254902
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96fdadbcc0e1f77459556c02fe45f777, type: 3}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Block : MonoBehaviour {
 
     public Sprite[] blockSprites;
+    public GameObject blockSparkles;
     public int lives = 2;
 
     SpriteRenderer render;
@@ -16,6 +17,7 @@ public class Block : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.name == "Ball") {
             if(lives == 0) {
+                InstanceSparkles();
                 FindObjectOfType<GameController>().DecreaseNumberOfBlock();
                 Destroy(gameObject);
             }
@@ -24,6 +26,11 @@ public class Block : MonoBehaviour {
                 render.sprite = blockSprites[lives];
             }
         }
+    }
+
+    private void InstanceSparkles() {
+        GameObject sparkles = Instantiate(blockSparkles, transform.position, transform.rotation);
+        Destroy(sparkles, 1f);
     }
 
 }

@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 722c64e9762aca442be8b01f856bcc23, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.16078432, g: 0.16470589, b: 0.17254902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122,4 +122,6 @@ MonoBehaviour:
   blockSprites:
   - {fileID: 21300000, guid: c05dc298baae06447a0909003b78931e, type: 3}
   - {fileID: 21300000, guid: b15db2e5db44ef3478366d5a8e15896c, type: 3}
+  blockSparkles: {fileID: 7044135559124866041, guid: 754cf0272df10d64498421425f8940d2,
+    type: 3}
   lives: 2
