@@ -15,7 +15,10 @@ public class Block : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.name == "Ball") {
-            if(lives == 0) Destroy(gameObject);
+            if(lives == 0) {
+                FindObjectOfType<GameController>().DecreaseNumberOfBlock();
+                Destroy(gameObject);
+            }
             else {
                 lives--;
                 render.sprite = blockSprites[lives];
