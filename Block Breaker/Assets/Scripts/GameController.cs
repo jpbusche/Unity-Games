@@ -5,13 +5,16 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
-    public GameObject blocks;
-    public Ball ball;
-    public Paddle paddle;
+    public GameObject blocks;  
     public Button nextButton;
     public Text messageText;
 
+    Ball ball;
+    Paddle paddle;
+
     void Start() {
+        ball = FindObjectOfType<Ball>();
+        paddle = FindObjectOfType<Paddle>();
         messageText.gameObject.SetActive(false);
         nextButton.gameObject.SetActive(false);
     }
@@ -20,8 +23,8 @@ public class GameController : MonoBehaviour {
     void Update() {
         int numberOfBlocks = blocks.transform.childCount;
         if(numberOfBlocks <= 0) {
-            Destroy(ball.gameObject);
-            Destroy(paddle.gameObject);
+            if(ball != null) Destroy(ball.gameObject);
+            if(paddle != null)Destroy(paddle.gameObject);
             messageText.gameObject.SetActive(true);
             nextButton.gameObject.SetActive(true);
         }

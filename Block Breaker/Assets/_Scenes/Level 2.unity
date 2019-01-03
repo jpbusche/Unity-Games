@@ -1357,18 +1357,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 168583643}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &171589196 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6658826788951676415, guid: 5ec439442bfa40b4fa1113783fe78718,
-    type: 3}
-  m_PrefabInstance: {fileID: 6658826789885291115}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9166789ce097a8449cc08145e6d4dac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &176066141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1759,8 +1747,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocks: {fileID: 969036348}
-  ball: {fileID: 171589196}
-  paddle: {fileID: 593329692}
   nextButton: {fileID: 890366168}
   messageText: {fileID: 701284575}
 --- !u!4 &212586141
@@ -5715,7 +5701,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level 2
+          m_StringArgument: Level 3
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

@@ -502,8 +502,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blocks: {fileID: 330086839}
-  ball: {fileID: 1222168566}
-  paddle: {fileID: 414950059}
   nextButton: {fileID: 439740865}
   messageText: {fileID: 588643316}
 --- !u!4 &116976496
@@ -2164,7 +2162,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Congratulations
+          m_StringArgument: Level 2
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -6333,18 +6331,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1717193e30ba0f45969a69fb1cc8622, type: 3}
---- !u!114 &1222168566 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6658826788951676415, guid: 5ec439442bfa40b4fa1113783fe78718,
-    type: 3}
-  m_PrefabInstance: {fileID: 1371051900}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9166789ce097a8449cc08145e6d4dac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1229175810
 PrefabInstance:
   m_ObjectHideFlags: 0

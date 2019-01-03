@@ -238,7 +238,6 @@ GameObject:
   m_Component:
   - component: {fileID: 204800539056424159}
   - component: {fileID: 204800539056424152}
-  - component: {fileID: 204800539056424158}
   m_Layer: 0
   m_Name: Lose Collider
   m_TagString: Untagged
@@ -286,18 +285,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 24, y: 1}
   m_EdgeRadius: 0
---- !u!114 &204800539056424158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204800539056424153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12841755db41f64ebe9a2e6e1dacfba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &204800539250785350
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ball : MonoBehaviour {
 
@@ -38,8 +39,14 @@ public class Ball : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if(isLauched && collision.gameObject.name != "Left Wall" && collision.gameObject.name != "Right Wall" && collision.gameObject.name != "Top Wall") {
+        if(isLauched && collision.gameObject.name != "Left Wall" && collision.gameObject.name != "Right Wall" && collision.gameObject.name != "Top Wall" && collision.gameObject.name != "Lose Collider") {
             GetComponent<AudioSource>().Play();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.gameObject.name == "Lose Collider") {
+            SceneManager.LoadScene("Game Over");
         }
     }
 }
