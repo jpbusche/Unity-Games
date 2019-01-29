@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
     public Button nextButton;
     public Text messageText;
     public Text blocksText;
+    public Text lifesText;
 
     Ball ball;
     Paddle paddle;
@@ -20,11 +21,13 @@ public class GameController : MonoBehaviour {
         nextButton.gameObject.SetActive(false);
         numberOfBlocks = FindObjectsOfType<Block>().Length;
         blocksText.text = "Blocks       " + numberOfBlocks.ToString();
+        lifesText.text = "Lifes       " + ball.numLifes.ToString();
     }
 
     // Update is called once per frame
     void Update() {
         blocksText.text = "Blocks       " + numberOfBlocks.ToString();
+        lifesText.text = "Lifes       " + ball.numLifes.ToString();
         if(numberOfBlocks <= 0) {
             if(ball != null) Destroy(ball.gameObject);
             if(paddle != null)Destroy(paddle.gameObject);

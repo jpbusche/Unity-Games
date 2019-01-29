@@ -135,6 +135,8 @@ MonoBehaviour:
   paddle: {fileID: 0}
   velY: 10
   velX: 2
+  randomFactor: 0.5
+  numLifes: 3
 --- !u!82 &6658826789885291117
 AudioSource:
   m_ObjectHideFlags: 0
