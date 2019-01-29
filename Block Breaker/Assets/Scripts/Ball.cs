@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Ball : MonoBehaviour {
 
     public Paddle paddle;
-    public float velY = 15f;
+    public float velY = 20f;
     public float velX = 0.5f;
     public float randomFactor = 0.2f;
     public float numLifes = 3;

@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 0}
-  velY: 10
+  velY: 15
   velX: 2
   randomFactor: 0.5
   numLifes: 3
