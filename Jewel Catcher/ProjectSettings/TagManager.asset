@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Bg1
+    uniqueID: 550663487
+    locked: 0
+  - name: Bg2
+    uniqueID: 236337473
+    locked: 0
+  - name: Bg3
+    uniqueID: 829408093
+    locked: 0
+  - name: Plat
+    uniqueID: 551163305
+    locked: 0
+  - name: Objects
+    uniqueID: 1361764101
+    locked: 0
