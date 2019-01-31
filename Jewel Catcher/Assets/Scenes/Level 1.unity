@@ -463,8 +463,8 @@ GameObject:
   m_Component:
   - component: {fileID: 599569008}
   - component: {fileID: 599569007}
-  - component: {fileID: 599569009}
   - component: {fileID: 599569010}
+  - component: {fileID: 599569009}
   m_Layer: 0
   m_Name: Gem
   m_TagString: Untagged
@@ -534,25 +534,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &599569009
-Animator:
-  serializedVersion: 3
+--- !u!114 &599569009
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599569006}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68d14c4ab8329a8498414604ae3a5454, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc1d7c5b4ec3a58438f7f381275ecc36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!60 &599569010
 PolygonCollider2D:
   m_ObjectHideFlags: 0
