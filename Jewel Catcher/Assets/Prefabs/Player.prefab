@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2494473515217021838}
   - component: {fileID: 2494473515217021839}
   - component: {fileID: 2494473515217021825}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,9 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22250b4bdccd88241b8bde51c7fea02f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 350
+  jumpForce: 320
   speed: 3.5
   radiusCheck: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  gemCollected: 0

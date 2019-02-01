@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class Player : MonoBehaviour {
     public float speed;
     public float radiusCheck = 0.2f;
     public LayerMask groundLayer;
+    public int gemCollected = 0;
 
     bool onGround, isDead = false, won = false;
     Rigidbody2D myRigidbody;
@@ -33,15 +35,37 @@ public class Player : MonoBehaviour {
                 myRigidbody.velocity = new Vector2(speed, myRigidbody.velocity.y);
                 GetComponent<SpriteRenderer>().flipX = true;
             }
+        } else {
+            myRigidbody.velocity = new Vector2(0f, myRigidbody.velocity.y);
         }
     }
 
     void PlayAnimations() {
-        if(!onGround) myAnim.Play("Jump");
-        else if(onGround && myRigidbody.velocity.x != 0) myAnim.Play("Run");
-        else if(isDead) myAnim.Play("Die");
+        if(isDead) myAnim.Play("Die");
         else if(won) myAnim.Play("Celebrate");
+        else if (!onGround) myAnim.Play("Jump");
+        else if(onGround && myRigidbody.velocity.x != 0) myAnim.Play("Run");
         else myAnim.Play("Idle");
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.CompareTag("Gem")) {
+            Destroy(collision.gameObject);
+            gemCollected++;
+        } else if(collision.gameObject.name == "Exit") {
+            won = true;
+        } else if(collision.gameObject.name == "BottomWall") {
+            SceneManager.LoadScene("Level 1");
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.gameObject.CompareTag("Monster")) {
+            isDead = true;
+            Physics2D.IgnoreLayerCollision(9, 10);
+        }
+        
     }
 }
 
