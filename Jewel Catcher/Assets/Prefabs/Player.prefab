@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 350
-  speed: 2
+  speed: 3.5
   radiusCheck: 0.2
   groundLayer:
     serializedVersion: 2
