@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -10,8 +9,9 @@ public class Player : MonoBehaviour {
     public float radiusCheck = 0.2f;
     public LayerMask groundLayer;
     public int gemCollected = 0;
+    public bool isDead = false, won = false;
 
-    bool onGround, isDead = false, won = false;
+    bool onGround;
     Rigidbody2D myRigidbody;
     Animator myAnim;
 
@@ -56,7 +56,7 @@ public class Player : MonoBehaviour {
         } else if(collision.gameObject.name == "Exit") {
             won = true;
         } else if(collision.gameObject.name == "BottomWall") {
-            SceneManager.LoadScene("Level 1");
+            isDead = true;
         }
     }
 
