@@ -12,10 +12,12 @@ public class GameController : MonoBehaviour {
     public float time = 30f;
 
     Player player;
+    Scene scene;
     
     // Start is called before the first frame update
     void Start() {
         player = FindObjectOfType<Player>();
+        scene = SceneManager.GetActiveScene();
         overlay.gameObject.SetActive(false);
         scoreText.text = "Score: " + player.gemCollected.ToString();
         timeText.text = "Time: " + time.ToString();
@@ -30,18 +32,17 @@ public class GameController : MonoBehaviour {
         if(player.won) {
             overlay.sprite = overlays[0];
             overlay.gameObject.SetActive(true);
-            if(Input.GetKeyDown(KeyCode.Space)) SceneManager.LoadScene("Congratulations");
+            if(Input.GetKeyDown(KeyCode.Space)) SceneManager.LoadScene(scene.buildIndex + 1);
         } else if(player.isDead) {
             overlay.sprite = overlays[1];
             overlay.gameObject.SetActive(true);
-            Scene scene = SceneManager.GetActiveScene();
-            if(Input.GetKeyDown(KeyCode.Space)) SceneManager.LoadScene(scene.name);
+            timeText.text = "Time: 0";
+            if(Input.GetKeyDown(KeyCode.Space)) SceneManager.LoadScene(scene.buildIndex);
         } else if(time <= 0) {
             overlay.sprite = overlays[2];
             overlay.gameObject.SetActive(true);
             timeText.text = "Time: 0";
-            Scene scene = SceneManager.GetActiveScene();
-            if(Input.GetKeyDown(KeyCode.Space)) SceneManager.LoadScene(scene.name);
+            if(Input.GetKeyDown(KeyCode.Space)) SceneManager.LoadScene(scene.buildIndex);
         }
     }
 }
