@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gem : MonoBehaviour
-{
+public class Gem : MonoBehaviour {
   
     public int rotationSpeed;
 

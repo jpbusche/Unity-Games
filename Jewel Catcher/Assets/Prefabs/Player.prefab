@@ -151,10 +151,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22250b4bdccd88241b8bde51c7fea02f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 320
+  jumpForce: 350
   speed: 3.5
   radiusCheck: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
   gemCollected: 0
+  isDead: 0
+  won: 0
+  soundsEffects:
+  - {fileID: 8300000, guid: 1e0eaab0cc0ae534bb4dedb7bc296706, type: 3}
+  - {fileID: 8300000, guid: 8ca4ed5396515504ba6eb6be456dfdbe, type: 3}
+  - {fileID: 8300000, guid: 8bb64f849988af14693ee6eb813015df, type: 3}
+  - {fileID: 8300000, guid: 77bde2a17bc97c64b9ab82ba1b93f770, type: 3}

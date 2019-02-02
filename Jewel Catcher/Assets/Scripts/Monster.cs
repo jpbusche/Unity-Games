@@ -47,5 +47,4 @@ public class Monster : MonoBehaviour {
         isVisible = false;
         myAnim.Play("Idle");
     }
-
 }

@@ -3935,10 +3935,9 @@ PrefabInstance:
       propertyPath: timeText
       value: 
       objectReference: {fileID: 2056778046}
-    - target: {fileID: 8719037294184978960, guid: 5ee30ca9f92be9240ba06fad3defcf8a,
-        type: 3}
-      propertyPath: nextLevel
-      value: Congratulations
+    - target: {fileID: 142381460, guid: 5ee30ca9f92be9240ba06fad3defcf8a, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ee30ca9f92be9240ba06fad3defcf8a, type: 3}
