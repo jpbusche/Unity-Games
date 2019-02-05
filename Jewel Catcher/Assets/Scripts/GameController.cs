@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour {
     public Text scoreText, timeText;
     public float time = 30f;
 
+    int totalScore;
     Player player;
     Scene scene;
     AudioSource myAudio;
@@ -21,6 +22,7 @@ public class GameController : MonoBehaviour {
         myAudio = GetComponent<AudioSource>();
         scene = SceneManager.GetActiveScene();
         overlay.gameObject.SetActive(false);
+        totalScore = PlayerPrefs.GetInt("Player Score");
         scoreText.text = "Score: " + player.gemCollected.ToString();
         timeText.text = "Time: " + time.ToString();
     }
@@ -31,6 +33,9 @@ public class GameController : MonoBehaviour {
             myAudio.mute = true;
             overlay.sprite = overlays[0];
             overlay.gameObject.SetActive(true);
+            totalScore += player.gemCollected;
+            player.gemCollected = 0;
+            PlayerPrefs.SetInt("Player Score", totalScore);
             if(Input.GetKeyDown(KeyCode.Space)) SceneManager.LoadScene(scene.buildIndex + 1);
         } else if(player.isDead) {
             myAudio.mute = true;
