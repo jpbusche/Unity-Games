@@ -28,14 +28,15 @@ public class Player : MonoBehaviour {
         PlayAnimations();
         if(!isDead && !won) {
             onGround = Physics2D.OverlapCircle(transform.position, radiusCheck, groundLayer);
+            float move = Input.GetAxis("Horizontal");
             if(Input.GetKeyDown(KeyCode.Space) && onGround) {
                 myRigidbody.AddForce(new Vector2(0f, jumpForce));
                 AudioSource.PlayClipAtPoint(soundsEffects[0], transform.position);
-            } else if(Input.GetKey(KeyCode.LeftArrow)) {
-                myRigidbody.velocity = new Vector2(-speed, myRigidbody.velocity.y);
+            } else if(move < 0) {
+                myRigidbody.velocity = new Vector2(move * speed, myRigidbody.velocity.y);
                 GetComponent<SpriteRenderer>().flipX = false;
-            } else if(Input.GetKey(KeyCode.RightArrow)) {
-                myRigidbody.velocity = new Vector2(speed, myRigidbody.velocity.y);
+            } else if(move > 0) {
+                myRigidbody.velocity = new Vector2(move * speed, myRigidbody.velocity.y);
                 GetComponent<SpriteRenderer>().flipX = true;
             }
         } else {
