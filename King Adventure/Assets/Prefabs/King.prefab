@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6747730638323392943}
   - component: {fileID: 6747730638323392936}
   - component: {fileID: 6747730638323392937}
+  - component: {fileID: 257827036453741256}
   m_Layer: 0
   m_Name: King
   m_TagString: Untagged
@@ -138,3 +139,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &257827036453741256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747730638323392938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c312653db8fd84fb74dc8072a7b014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
