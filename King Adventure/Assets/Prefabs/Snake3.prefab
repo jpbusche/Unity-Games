@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6519395807771612188}
   - component: {fileID: 2948622039856605464}
   m_Layer: 9
-  m_Name: SnakeY3
+  m_Name: Snake3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1109669441
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d77f36a5c79cf6d4298ef645f4f7a58a, type: 3}
   m_Color: {r: 0, g: 0.3137255, b: 0.972549, a: 1}
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814ff78317f23d743ad4b0cb3f07836e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.2
+  speed: 3
   health: 7
   wallCheck: {fileID: 758513127590051146}
   groundCheck: {fileID: 1321153202094919995}

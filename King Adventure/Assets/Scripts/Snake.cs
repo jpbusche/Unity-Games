@@ -22,16 +22,14 @@ public class Snake : MonoBehaviour {
     void Update() {
         touchedWall = Physics2D.OverlapCircle(wallCheck.position, 0.2f, layerMask);
         onGround = Physics2D.OverlapCircle(groundCheck.position, 0.2f, layerMask);
-        if(touchedWall || !onGround) {
-            Flip();
-            speed *= -1;
-        }
+        if(touchedWall || !onGround) Flip();
         myRigidbody.velocity = new Vector2(speed, myRigidbody.velocity.y);
     }
 
     void Flip() {
         facingRight = !facingRight;
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        speed *= -1;
     }
 
     void OnTriggerEnter2D(Collider2D collision) {

@@ -12,10 +12,11 @@ public class King : MonoBehaviour {
     public LayerMask groundLayer;
     public Transform spawnAttack;
     public GameObject attack;
+    public GameObject crown;
 
     bool invunerable = false, onGround, facingRight = true;
     float radiusCheck = 1.2f, nextAttack = 0f;
-    int coins = 0;
+    int coins = 0, totalCoins;
     Rigidbody2D myRigidbody;
     Animator myAnim;
 
@@ -23,6 +24,7 @@ public class King : MonoBehaviour {
     void Start() {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
+        totalCoins = PlayerPrefs.GetInt("Player Coins");
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class King : MonoBehaviour {
             }
             if((move < 0 && facingRight) || (move > 0 && !facingRight)) Flip();
         } else {
+            PlayerPrefs.SetInt("Player Coins", totalCoins + coins);
             myRigidbody.velocity = new Vector2(0f, myRigidbody.velocity.y);
         }
     }
@@ -63,13 +66,20 @@ public class King : MonoBehaviour {
         if(collision.CompareTag("Enemy") && !invunerable) {
             health--;
             StartCoroutine(DamageEffect());
-            if(health <= 0) Destroy(gameObject);
-        } else if(collision.CompareTag("Exit")) {
-            won = true;
-        } else if(collision.CompareTag("Water")) {
-            Destroy(gameObject, 0.5f);
+            if(health <= 0) KingDeath();
+        } else if(collision.CompareTag("Exit")) won = true;
+        else if(collision.CompareTag("Water")) Destroy(gameObject);
+        else if(collision.CompareTag("Coin")) {
+            coins++;
+            Destroy(collision.gameObject);
         }
         
+    }
+
+    void KingDeath() {
+        Destroy(gameObject);
+        GameObject instance = Instantiate(crown, transform.position, Quaternion.identity);
+        instance.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 100f));
     }
 
     IEnumerator DamageEffect() {
