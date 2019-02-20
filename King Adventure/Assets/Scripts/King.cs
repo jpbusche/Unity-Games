@@ -17,7 +17,6 @@ public class King : MonoBehaviour {
     int coins = 0;
     Rigidbody2D myRigidbody;
     Animator myAnim;
-    GameObject instance = null;
 
     // Start is called before the first frame update
     void Start() {
