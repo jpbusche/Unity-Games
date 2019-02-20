@@ -211,6 +211,11 @@ MonoBehaviour:
   spawnAttack: {fileID: 6954140993276364714}
   attack: {fileID: 9028759949354595300, guid: 4d7a0f3eff669e14dba0baa45f301b6b, type: 3}
   crown: {fileID: 1065930361907294998, guid: 1b54278582f07f14682c1b6fdb06db6a, type: 3}
+  soundsEffects:
+  - {fileID: 8300000, guid: b43f8ba66224b8f40864ad4df7bc9df6, type: 3}
+  - {fileID: 8300000, guid: 8f8cca43c6f92304696bb527c51d2d84, type: 3}
+  - {fileID: 8300000, guid: f174936bc4f77ec489d3b1bf3382ee39, type: 3}
+  - {fileID: 8300000, guid: 4b970c2d77587ee489f781982abd5395, type: 3}
 --- !u!1 &9125996874324355433
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,10 +13,10 @@ public class King : MonoBehaviour {
     public Transform spawnAttack;
     public GameObject attack;
     public GameObject crown;
+    public AudioClip[] soundsEffects;
 
     bool invunerable = false, onGround, facingRight = true;
     float radiusCheck = 1.2f, nextAttack = 0f;
-    int coins = 0, totalCoins;
     Rigidbody2D myRigidbody;
     Animator myAnim;
 
@@ -24,7 +24,6 @@ public class King : MonoBehaviour {
     void Start() {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
-        totalCoins = PlayerPrefs.GetInt("Player Coins");
     }
 
     // Update is called once per frame
@@ -36,15 +35,16 @@ public class King : MonoBehaviour {
             myRigidbody.velocity = new Vector2(move * speed, myRigidbody.velocity.y);
             if(Input.GetKeyDown(KeyCode.Space) && onGround) {
                 myRigidbody.AddForce(new Vector2(0f, jumpForce));
+                AudioSource.PlayClipAtPoint(soundsEffects[0], transform.position);
             }else if (Input.GetKeyDown(KeyCode.X) && onGround && Time.time > nextAttack) {
                 nextAttack = Time.time + attackRate;
                 GameObject instance = Instantiate(attack, spawnAttack.position, spawnAttack.rotation);
+                AudioSource.PlayClipAtPoint(soundsEffects[1], transform.position);
                 if(!facingRight) instance.transform.eulerAngles = new Vector3(180f, 0f, 180f);
                 Destroy(instance, 0.3f);
             }
             if((move < 0 && facingRight) || (move > 0 && !facingRight)) Flip();
         } else {
-            PlayerPrefs.SetInt("Player Coins", totalCoins + coins);
             myRigidbody.velocity = new Vector2(0f, myRigidbody.velocity.y);
         }
     }
@@ -63,17 +63,16 @@ public class King : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.CompareTag("Enemy") && !invunerable) {
+        if(collision.CompareTag("Coin")) {
+            Destroy(collision.gameObject);
+            AudioSource.PlayClipAtPoint(soundsEffects[3], transform.position);
+        } else if(collision.CompareTag("Enemy") && !invunerable) {
             health--;
+            AudioSource.PlayClipAtPoint(soundsEffects[2], transform.position);
             StartCoroutine(DamageEffect());
             if(health <= 0) KingDeath();
         } else if(collision.CompareTag("Exit")) won = true;
         else if(collision.CompareTag("Water")) Destroy(gameObject);
-        else if(collision.CompareTag("Coin")) {
-            coins++;
-            Destroy(collision.gameObject);
-        }
-        
     }
 
     void KingDeath() {
