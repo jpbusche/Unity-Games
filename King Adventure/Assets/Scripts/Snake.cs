@@ -33,4 +33,22 @@ public class Snake : MonoBehaviour {
         facingRight = !facingRight;
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     }
+
+    void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.CompareTag("Attack")) {
+            health--;
+            StartCoroutine(DamageEffect());
+            if(health <= 0) Destroy(gameObject);
+        }
+    }
+
+    IEnumerator DamageEffect() {
+        float actualSpeed = speed;
+        speed *= -1;
+        GetComponent<SpriteRenderer>().color = Color.red;
+        myRigidbody.AddForce(new Vector2(0f, 100f));
+        yield return new WaitForSeconds(0.3f);
+        speed = actualSpeed;
+        GetComponent<SpriteRenderer>().color = Color.white;
+    }
 }

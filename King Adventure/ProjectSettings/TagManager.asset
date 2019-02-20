@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Attack
+  - Enemy
+  - King
+  - Coin
+  - Exit
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -40,6 +46,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Tree
+    uniqueID: 3720493327
     locked: 0
   - name: Background
     uniqueID: 1871839829
