@@ -45,6 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endText: {fileID: 0}
+  lifeBar: {fileID: 0}
+  sprites:
+  - {fileID: 21300006, guid: 20d25a1f6d2b3274a8f66827ae38a3a8, type: 3}
+  - {fileID: 21300004, guid: 20d25a1f6d2b3274a8f66827ae38a3a8, type: 3}
+  - {fileID: 21300002, guid: 20d25a1f6d2b3274a8f66827ae38a3a8, type: 3}
+  - {fileID: 21300000, guid: 20d25a1f6d2b3274a8f66827ae38a3a8, type: 3}
 --- !u!82 &1828064238
 AudioSource:
   m_ObjectHideFlags: 0
