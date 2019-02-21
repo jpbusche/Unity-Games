@@ -43,10 +43,11 @@ public class Snake : MonoBehaviour {
     IEnumerator DamageEffect() {
         float actualSpeed = speed;
         speed *= -1;
+        Color actualcolor = GetComponent<SpriteRenderer>().color;
         GetComponent<SpriteRenderer>().color = Color.red;
         myRigidbody.AddForce(new Vector2(0f, 100f));
         yield return new WaitForSeconds(0.3f);
         speed = actualSpeed;
-        GetComponent<SpriteRenderer>().color = Color.white;
+        GetComponent<SpriteRenderer>().color = actualcolor;
     }
 }
