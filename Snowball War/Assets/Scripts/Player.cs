@@ -6,19 +6,20 @@ public class Player : MonoBehaviour {
 
     [SerializeField] float moveSpeed; 
     [SerializeField] float jumpForce;
+    [SerializeField] float radiusCheck;
     [SerializeField] string moveAxis;
     [SerializeField] KeyCode jump;
     [SerializeField] KeyCode throwBall;
     [SerializeField] LayerMask ground;
 
-
     Rigidbody2D myRigid;
-    float radiusCheck = 1.2f;
+    Animator myAnim;
     bool facingRight = true, onGround;
 
     // Start is called before the first frame update
     void Start() {
         myRigid = GetComponent<Rigidbody2D>();
+        myAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,6 +30,8 @@ public class Player : MonoBehaviour {
         if(Input.GetKeyDown(jump) && onGround) {
             myRigid.AddForce(new Vector2(0f, jumpForce));
         }
+        myAnim.SetFloat("Speed", Mathf.Abs(myRigid.velocity.x));
+        myAnim.SetBool("Grounded", onGround);
         if((move < 0 && facingRight) || (move > 0 && !facingRight)) Flip();
     }
 
