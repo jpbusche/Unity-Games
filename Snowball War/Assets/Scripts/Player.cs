@@ -14,10 +14,11 @@ public class Player : MonoBehaviour {
     [SerializeField] Transform groundCheck;
     [SerializeField] Transform throwPoint;
     [SerializeField] GameObject snowball;
+    [SerializeField] bool facingRight;
 
     Rigidbody2D myRigid;
     Animator myAnim;
-    bool facingRight = true, onGround;
+    bool onGround;
     float radiusCheck = 0.2f, nextAttack = 0f;
 
     // Start is called before the first frame update
