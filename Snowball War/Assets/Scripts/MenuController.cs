@@ -19,7 +19,7 @@ public class MenuController : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         optionsTexts[index].color = new Color(234f / 255f, 164f / 255f, 164f / 255f);
-        float move = Input.GetAxis("JoyVertical");
+        float move = Input.GetAxis("Joy1Vertical");
         if((Input.GetKeyDown(KeyCode.DownArrow) || move > 0f) && index < optionsTexts.Length - 1) {
             optionsTexts[index].color = Color.white;
             index++;
