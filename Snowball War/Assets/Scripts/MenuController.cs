@@ -18,13 +18,14 @@ public class MenuController : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         optionsTexts[index].color = new Color(234f / 255f, 164f / 255f, 164f / 255f);
-        if(Input.GetKeyDown(KeyCode.DownArrow) && index < optionsTexts.Length - 1) {
+        float move = Input.GetAxis("JoyVertical");
+        if((Input.GetKeyDown(KeyCode.DownArrow) || move > 0f) && index < optionsTexts.Length - 1) {
             optionsTexts[index].color = Color.white;
             index++;
-        } else if(Input.GetKeyDown(KeyCode.UpArrow) && index > 0) {
+        } else if((Input.GetKeyDown(KeyCode.UpArrow) || move < 0f) && index > 0) {
             optionsTexts[index].color = Color.white;
             index--;
-        } else if(Input.GetKeyDown(KeyCode.Return)) {
+        } else if(Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown("joystick 2 button 0")) {
             if(index == 0) SceneManager.LoadScene("Level");
             else Application.Quit();
         }
