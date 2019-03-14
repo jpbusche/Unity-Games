@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MenuController : MonoBehaviour {
 
     public Text[] optionsTexts;
+    public KeyCode button;
 
     int index;
 
