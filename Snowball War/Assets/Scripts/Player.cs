@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
     [SerializeField] Transform throwPoint;
     [SerializeField] GameObject snowball;
     [SerializeField] bool facingRight;
+    [SerializeField] AudioClip soundEffect;
 
     Rigidbody2D myRigid;
     Animator myAnim;
@@ -51,6 +52,7 @@ public class Player : MonoBehaviour {
 
     IEnumerator ThrowBall() {
         myAnim.SetTrigger("Throw");
+        AudioSource.PlayClipAtPoint(soundEffect, transform.position);
         yield return new WaitForSeconds(0.1f);
         GameObject ball = (GameObject) Instantiate(snowball, throwPoint.position, throwPoint.rotation);
         ball.transform.localScale = transform.localScale;
