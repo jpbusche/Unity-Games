@@ -3,6 +3,11 @@ Esse repositório foi criado com o intuito de colocar todos os jogos que foram f
 
 ## Sumário
 - [1. Ada](#1-ada)
+- [2. Block Breaker](#2-block-breaker)
+- [3. Jewel Catcher](#3-jewel-catcher)
+- [4. King Adventure](#4-king-adventure)
+- [5. Number Wizard](#5-number-wizard)
+- [6. Snowball War](#6-snowball-war)
 
 ## 1. Ada
 
