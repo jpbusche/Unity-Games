@@ -11,7 +11,7 @@ Esse repositório foi criado com o intuito de colocar todos os jogos que foram f
 
 ## 1. Ada
 
-___Ada___ é um jogo que mescla vários estilos de jogo, onde você é uma pilota espacial que acaba caindo numa ilha cheia de zumbi. Passando pelos estilos _space shooter_, _runner_ e _shooter_.
+___Ada___ é um jogo que mescla vários estilos de jogo, onde você é uma pilota espacial que acaba caindo num planeta cheio de zumbis. Passando pelos estilos _space shooter_, _runner_ e _shooter_.
 ![image](https://github.com/jpbusche/Unity-Games/assets/13814865/e4ec684c-6d3c-47e9-91f7-389c04f0afb6)
 
 ## 2. Block Breaker
@@ -37,5 +37,5 @@ ___Number Wizard___ é um jogo de adivinhação, onde o jogador deve pensar num 
 
 ## 6. Snowball War
 
-___Snowball War__ é um jogo multiplayer local onde os jogadores são crianças numa guerra de bola de neve.
+__Snowball War__ é um jogo multiplayer local onde os jogadores são crianças numa guerra de bola de neve.
 ![image](https://github.com/jpbusche/Unity-Games/assets/13814865/7a7d8070-e58d-4965-a0c0-5c2011853642)
